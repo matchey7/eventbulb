@@ -312,3 +312,8 @@
     max-height: 500px;
     overflow-y: scroll;
   }
+
+  .price {
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+  }
