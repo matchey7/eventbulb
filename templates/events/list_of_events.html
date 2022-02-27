@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+  {% load static %}
+  <main class="wrap-content">
+    <div class="card-background event-details">
+      <section class="card event-header">
+        <div class="event-info">
+          <h3 class="event-title">YOUR UPCOMING EVENTS</h3>
+        </div>
+      </section>
+      <section class="card event-header">
+        <div>
+            <ul class="search-bar">
+                <li>
+                    <h3 class="event-title">FREE</h3>
+                </li>
+                <li>
+                    <h3 class="event-title">SEARCH</h3>
+                </li>
+                <li>
+                    <button class="button yellow">FILTER</button>
+                </li>
+            </ul>
+        </div>
+      </section>
+      <section>
+          <ul>
+              <li class="card event">
+                    <img class="event-image" src="{% static 'images/image_placeholder.jpg' %}" alt="">
+                    <p class="event-info" >information about the event</p>
+                    <section class="event-controls">
+                        <button class="button yellow">ATTEND</button>
+                        <button class="button yellow">DETAIL</button>
+                    </section>
+              </li>
+              <li class="card event">
+                    <img class="event-image" src="{% static 'images/image_placeholder.jpg' %}" alt="">
+                    <p class="event-info" >information about the event</p>
+                    <section class="event-controls">
+                        <button class="button yellow">ATTEND</button>
+                        <button class="button yellow">DETAIL</button>
+                    </section>
+              </li>
+            </ul>
+      </section>
+      </div>
+    </div>
+  </main>
+{% endblock %}
