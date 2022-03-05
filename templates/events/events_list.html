@@ -27,15 +27,16 @@
           <ul>
               <li class="card event">
                     <img class="event-image" src="{% static 'images/image_placeholder.jpg' %}" alt="">
-                    <p class="event-info" >information about the event</p>
-                    <section class="event-controls">
-                        <button class="button yellow">ATTEND</button>
-                        <button class="button yellow">DETAIL</button>
-                    </section>
-              </li>
-              <li class="card event">
-                    <img class="event-image" src="{% static 'images/image_placeholder.jpg' %}" alt="">
-                    <p class="event-info" >information about the event</p>
+                    <p class="event-info" >
+                      {% for event in events  %}
+                      <section class="card">
+                          <p>Title: {{event.title}}</p>
+                          <p>Description: {{event.description}}</p>
+                          <p>Time: {{event.datetime}}</p>
+                          <p>Cost: £{{event.cost}}</p>
+                      </section>
+                      {% endfor %}
+                    </p>
                     <section class="event-controls">
                         <button class="button yellow">ATTEND</button>
                         <button class="button yellow">DETAIL</button>
