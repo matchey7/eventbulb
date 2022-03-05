@@ -6,6 +6,10 @@ from .models import Event
 def details(request):
     return render(request, 'events/details.html')
 
-def events_list(request):
-    events = Event.objects.all()
-    return render(request, 'events/events_list.html', {"events": events})
+def list(request):
+    today = datetime.today()
+
+    events = Event.objects.filter(
+        datetime_gte=today).order_by("datetime")
+    return render(request, 'events/list.html', {"events": events})
+    
