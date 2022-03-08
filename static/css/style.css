@@ -111,7 +111,7 @@ main {
   padding: 1.5rem;
   background-color: white;
   border-radius: 0.5rem;
-  box-shadow: var(--shadow-small);
+  box-shadow: var(--shadow-small)
 }
 
 .wrap-content {
@@ -311,4 +311,15 @@ input[type="text"], input[type="password"], textarea {
 .reviews-scroller {
   max-height: 500px;
   overflow-y: scroll;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+button, input, select {
+  font-size: 1.2rem;
 }

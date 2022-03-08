@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, authenticate
-from .models import UserProfile
+from accounts.models import UserProfile
+
 
 def register(request):
     if request.method == 'POST':
@@ -11,12 +12,10 @@ def register(request):
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
-            UserProfile.objects.create(user = user)
+            UserProfile.objects.create(user=user)
             login(request, user)
             return redirect('events_list')
     else:
         form = UserCreationForm()
 
     return render(request, 'registration/register.html', {'form': form})
-
-# Create your views here.

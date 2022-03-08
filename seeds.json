@@ -14,7 +14,7 @@
         "pk": 2,
         "fields": {
             "title": "TED Talk - Data ",
-            "description": "Deep learning",
+            "description": "Talk",
             "datetime": "2022-10-10T16:00:00.000Z", 
             "cost": 10.00
         }
