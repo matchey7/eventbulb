@@ -8,4 +8,5 @@ urlpatterns = [
          views.add_attending, name="events_add_attending"),
     path('<int:id>/remove_attending/',
          views.remove_attending, name="events_remove_attending"),
+     path('dashboard/', views.dashboard, name="events_dashboard"),
 ]
